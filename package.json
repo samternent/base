@@ -1,7 +1,7 @@
 {
-  "name": "simons-sweet-shop",
+  "name": "base",
   "version": "1.0.0",
-  "description": "Simons Sweet Shop Challenge",
+  "description": "Base App",
   "main": "index.js",
   "scripts": {
     "app-build": "rollup -c",
