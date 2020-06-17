@@ -1,0 +1,32 @@
+{
+  "name": "simons-sweet-shop",
+  "version": "1.0.0",
+  "description": "Simons Sweet Shop Challenge",
+  "main": "index.js",
+  "scripts": {
+    "core-build": "tsc -p core/tsconfig.json",
+    "core-watch": "tsc -p core/tsconfig.json -w",
+    "core-bundle": "rollup core/index.js --file core/sss-core.js --format cjs",
+    "core-test": "ava core/**/*.test.ts",
+    "core-test-watch": "ava core/**/*.test.ts --watch",
+    "postinstall": "npm run build-core"
+  },
+  "author": " <sam.ternent@gmail.com>",
+  "license": "ISC",
+  "devDependencies": {
+    "@ava/typescript": "^1.1.1",
+    "ava": "^3.9.0",
+    "ts-node": "^8.10.2",
+    "tslint": "^6.1.2",
+    "tslint-config-airbnb": "^5.11.2",
+    "typescript": "^3.9.5"
+  },
+  "ava": {
+    "extensions": [
+      "ts"
+    ],
+    "require": [
+      "ts-node/register"
+    ]
+  }
+}
