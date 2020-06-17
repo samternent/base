@@ -1,7 +1,7 @@
 {
-  "name": "base",
+  "name": "sss",
   "version": "1.0.0",
-  "description": "Base App",
+  "description": "Simons Sweet Shop",
   "main": "index.js",
   "scripts": {
     "app-build": "rollup -c",
