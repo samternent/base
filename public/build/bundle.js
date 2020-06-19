@@ -24,6 +24,10 @@ var app = (function () {
     function safe_not_equal(a, b) {
         return a != a ? b == b : a !== b || ((a && typeof a === 'object') || typeof a === 'function');
     }
+
+    function append(target, node) {
+        target.appendChild(node);
+    }
     function insert(target, node, anchor) {
         target.insertBefore(node, anchor || null);
     }
@@ -33,8 +37,24 @@ var app = (function () {
     function element(name) {
         return document.createElement(name);
     }
+    function text(data) {
+        return document.createTextNode(data);
+    }
+    function space() {
+        return text(' ');
+    }
+    function empty() {
+        return text('');
+    }
+    function listen(node, event, handler, options) {
+        node.addEventListener(event, handler, options);
+        return () => node.removeEventListener(event, handler, options);
+    }
     function children(element) {
         return Array.from(element.childNodes);
+    }
+    function set_input_value(input, value) {
+        input.value = value == null ? '' : value;
     }
     function custom_event(type, detail) {
         const e = document.createEvent('CustomEvent');
@@ -233,6 +253,10 @@ var app = (function () {
     function dispatch_dev(type, detail) {
         document.dispatchEvent(custom_event(type, Object.assign({ version: '3.23.2' }, detail)));
     }
+    function append_dev(target, node) {
+        dispatch_dev("SvelteDOMInsert", { target, node });
+        append(target, node);
+    }
     function insert_dev(target, node, anchor) {
         dispatch_dev("SvelteDOMInsert", { target, node, anchor });
         insert(target, node, anchor);
@@ -240,6 +264,26 @@ var app = (function () {
     function detach_dev(node) {
         dispatch_dev("SvelteDOMRemove", { node });
         detach(node);
+    }
+    function listen_dev(node, event, handler, options, has_prevent_default, has_stop_propagation) {
+        const modifiers = options === true ? ["capture"] : options ? Array.from(Object.keys(options)) : [];
+        if (has_prevent_default)
+            modifiers.push('preventDefault');
+        if (has_stop_propagation)
+            modifiers.push('stopPropagation');
+        dispatch_dev("SvelteDOMAddEventListener", { node, event, handler, modifiers });
+        const dispose = listen(node, event, handler, options);
+        return () => {
+            dispatch_dev("SvelteDOMRemoveEventListener", { node, event, handler, modifiers });
+            dispose();
+        };
+    }
+    function set_data_dev(text, data) {
+        data = '' + data;
+        if (text.data === data)
+            return;
+        dispatch_dev("SvelteDOMSetData", { node: text, data });
+        text.data = data;
     }
     function validate_slots(name, slot, keys) {
         for (const slot_key of Object.keys(slot)) {
@@ -265,31 +309,174 @@ var app = (function () {
         $inject_state() { }
     }
 
-    var start = function () { return 'hi'; };
+    /*! *****************************************************************************
+    Copyright (c) Microsoft Corporation.
+
+    Permission to use, copy, modify, and/or distribute this software for any
+    purpose with or without fee is hereby granted.
+
+    THE SOFTWARE IS PROVIDED "AS IS" AND THE AUTHOR DISCLAIMS ALL WARRANTIES WITH
+    REGARD TO THIS SOFTWARE INCLUDING ALL IMPLIED WARRANTIES OF MERCHANTABILITY
+    AND FITNESS. IN NO EVENT SHALL THE AUTHOR BE LIABLE FOR ANY SPECIAL, DIRECT,
+    INDIRECT, OR CONSEQUENTIAL DAMAGES OR ANY DAMAGES WHATSOEVER RESULTING FROM
+    LOSS OF USE, DATA OR PROFITS, WHETHER IN AN ACTION OF CONTRACT, NEGLIGENCE OR
+    OTHER TORTIOUS ACTION, ARISING OUT OF OR IN CONNECTION WITH THE USE OR
+    PERFORMANCE OF THIS SOFTWARE.
+    ***************************************************************************** */
+
+    function __spreadArrays() {
+        for (var s = 0, i = 0, il = arguments.length; i < il; i++) s += arguments[i].length;
+        for (var r = Array(s), k = 0, i = 0; i < il; i++)
+            for (var a = arguments[i], j = 0, jl = a.length; j < jl; j++, k++)
+                r[k] = a[j];
+        return r;
+    }
+
+    var tableTemplate = function (amount, packets) {
+        var row = Array.from(new Array(amount + 1)).map(function (_, i) { return !i ? i : amount + 1; });
+        return __spreadArrays(__spreadArrays([0], packets).map(function () { return (__spreadArrays(row)); }));
+    };
+    var compute = function (amount, packets, tableTemplate) {
+        var table = __spreadArrays(tableTemplate);
+        for (var i = 0; i <= amount; i++) {
+            for (var j = 1; j <= packets.length; j++) {
+                // if the current packet size is greater than the current value i
+                // We assign the current row the same value as the previous row
+                // if the packet size is less than the required value
+                // wewill want to find the minimum value, between the current value in the previous row
+                // and the current active size and the last value with the previous packet
+                table[j][i] = (packets[j - 1] > i)
+                    ? table[j - 1][i]
+                    : Math.min(table[j - 1][i], 1 + table[j][i - packets[j - 1]]);
+            }
+        }
+        return table;
+    };
+    var order = function (amount, packets) {
+        if (isNaN(amount) || !amount || amount < 1) {
+            return 0;
+        }
+        var template = tableTemplate(amount, packets);
+        var table = compute(amount, packets, template).splice(1, packets.length);
+        var count = (table[packets.length - 1][amount] > amount) ? -1 : table[packets.length - 1][amount];
+        if (count > 0) {
+            return count;
+        }
+        // TODO
+        // Pick all possible solutions
+        // Choose the lease amount of sweets
+        // That's our answer
+        var inc = amount;
+        while (count < 0 && inc > 0) {
+            count = (table[packets.length - 1][inc] > amount)
+                ? -1
+                : table[packets.length - 1][inc];
+            inc--;
+        }
+        return count;
+    };
 
     /* src/App.svelte generated by Svelte v3.23.2 */
     const file = "src/App.svelte";
 
-    function create_fragment(ctx) {
-    	let h1;
+    // (11:0) {#if results}
+    function create_if_block(ctx) {
+    	let p;
+    	let t0;
+    	let t1;
+    	let t2;
 
     	const block = {
     		c: function create() {
-    			h1 = element("h1");
-    			h1.textContent = `${start()}`;
-    			add_location(h1, file, 4, 0, 51);
+    			p = element("p");
+    			t0 = text("You can do this with ");
+    			t1 = text(/*results*/ ctx[1]);
+    			t2 = text(" bags");
+    			add_location(p, file, 11, 2, 202);
+    		},
+    		m: function mount(target, anchor) {
+    			insert_dev(target, p, anchor);
+    			append_dev(p, t0);
+    			append_dev(p, t1);
+    			append_dev(p, t2);
+    		},
+    		p: function update(ctx, dirty) {
+    			if (dirty & /*results*/ 2) set_data_dev(t1, /*results*/ ctx[1]);
+    		},
+    		d: function destroy(detaching) {
+    			if (detaching) detach_dev(p);
+    		}
+    	};
+
+    	dispatch_dev("SvelteRegisterBlock", {
+    		block,
+    		id: create_if_block.name,
+    		type: "if",
+    		source: "(11:0) {#if results}",
+    		ctx
+    	});
+
+    	return block;
+    }
+
+    function create_fragment(ctx) {
+    	let input;
+    	let t;
+    	let if_block_anchor;
+    	let mounted;
+    	let dispose;
+    	let if_block = /*results*/ ctx[1] && create_if_block(ctx);
+
+    	const block = {
+    		c: function create() {
+    			input = element("input");
+    			t = space();
+    			if (if_block) if_block.c();
+    			if_block_anchor = empty();
+    			add_location(input, file, 9, 0, 166);
     		},
     		l: function claim(nodes) {
     			throw new Error("options.hydrate only works if the component was compiled with the `hydratable: true` option");
     		},
     		m: function mount(target, anchor) {
-    			insert_dev(target, h1, anchor);
+    			insert_dev(target, input, anchor);
+    			set_input_value(input, /*value*/ ctx[0]);
+    			insert_dev(target, t, anchor);
+    			if (if_block) if_block.m(target, anchor);
+    			insert_dev(target, if_block_anchor, anchor);
+
+    			if (!mounted) {
+    				dispose = listen_dev(input, "input", /*input_input_handler*/ ctx[2]);
+    				mounted = true;
+    			}
     		},
-    		p: noop,
+    		p: function update(ctx, [dirty]) {
+    			if (dirty & /*value*/ 1 && input.value !== /*value*/ ctx[0]) {
+    				set_input_value(input, /*value*/ ctx[0]);
+    			}
+
+    			if (/*results*/ ctx[1]) {
+    				if (if_block) {
+    					if_block.p(ctx, dirty);
+    				} else {
+    					if_block = create_if_block(ctx);
+    					if_block.c();
+    					if_block.m(if_block_anchor.parentNode, if_block_anchor);
+    				}
+    			} else if (if_block) {
+    				if_block.d(1);
+    				if_block = null;
+    			}
+    		},
     		i: noop,
     		o: noop,
     		d: function destroy(detaching) {
-    			if (detaching) detach_dev(h1);
+    			if (detaching) detach_dev(input);
+    			if (detaching) detach_dev(t);
+    			if (if_block) if_block.d(detaching);
+    			if (detaching) detach_dev(if_block_anchor);
+    			mounted = false;
+    			dispose();
     		}
     	};
 
@@ -305,6 +492,8 @@ var app = (function () {
     }
 
     function instance($$self, $$props, $$invalidate) {
+    	let value = 251;
+    	let bags = [250, 500, 1000, 2000, 5000];
     	const writable_props = [];
 
     	Object.keys($$props).forEach(key => {
@@ -313,8 +502,33 @@ var app = (function () {
 
     	let { $$slots = {}, $$scope } = $$props;
     	validate_slots("App", $$slots, []);
-    	$$self.$capture_state = () => ({ start });
-    	return [];
+
+    	function input_input_handler() {
+    		value = this.value;
+    		$$invalidate(0, value);
+    	}
+
+    	$$self.$capture_state = () => ({ order, value, bags, results });
+
+    	$$self.$inject_state = $$props => {
+    		if ("value" in $$props) $$invalidate(0, value = $$props.value);
+    		if ("bags" in $$props) $$invalidate(3, bags = $$props.bags);
+    		if ("results" in $$props) $$invalidate(1, results = $$props.results);
+    	};
+
+    	let results;
+
+    	if ($$props && "$$inject" in $$props) {
+    		$$self.$inject_state($$props.$$inject);
+    	}
+
+    	$$self.$$.update = () => {
+    		if ($$self.$$.dirty & /*value*/ 1) {
+    			 $$invalidate(1, results = order(parseInt(value, 10), bags));
+    		}
+    	};
+
+    	return [value, results, input_input_handler];
     }
 
     class App extends SvelteComponentDev {
