@@ -356,17 +356,15 @@ var app = (function () {
         if (isNaN(amount) || !amount || amount < 1) {
             return 0;
         }
-        var template = tableTemplate(amount, packets);
-        var table = compute(amount, packets, template).splice(1, packets.length);
-        var count = (table[packets.length - 1][amount] > amount) ? -1 : table[packets.length - 1][amount];
+        var maxAmount = amount + packets[0];
+        var template = tableTemplate(maxAmount, packets);
+        var table = compute(maxAmount, packets, template).splice(1, packets.length);
+        var count = (table[packets.length - 1][amount] > maxAmount) ? -1 : table[packets.length - 1][amount];
         if (count > 0) {
             return count;
         }
-        // TODO
-        // Pick all possible solutions
-        // Choose the lease amount of sweets
-        // That's our answer
-        var inc = amount;
+        // TODO: Trace the winning combo back to get the packet sizes.
+        var inc = maxAmount;
         while (count < 0 && inc > 0) {
             count = (table[packets.length - 1][inc] > amount)
                 ? -1

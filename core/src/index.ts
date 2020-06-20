@@ -19,7 +19,7 @@ const compute = (amount: number, packets: Array<number>, tableTemplate) => {
             // wewill want to find the minimum value, between the current value in the previous row
             // and the current active size and the last value with the previous packet
             table[j][i] = (packets[j - 1] > i)
-                ? 1//table[j - 1][i]
+                ? table[j - 1][i]
                 : Math.min(table[j - 1][i], 1 + table[j][i - packets[j - 1]]);
         }
     }
@@ -32,20 +32,19 @@ export const order = (amount: number, packets: Array<number>) => {
         return 0;
     }
 
-    const template = tableTemplate(amount, packets);
-    const table : Array<Array<any>> = compute(amount, packets, template).splice(1, packets.length);
-    let count : number = (table[packets.length - 1][amount] > amount) ? -1 : table[packets.length - 1][amount];
+    const maxAmount = amount + packets[0];
+
+    const template = tableTemplate(maxAmount, packets);
+    const table : Array<Array<any>> = compute(maxAmount, packets, template).splice(1, packets.length);
+    let count : number = (table[packets.length - 1][amount] > maxAmount) ? -1 : table[packets.length - 1][amount];
 
     if (count > 0) {
         return count;
     }
 
-    // TODO
-    // Pick all possible solutions
-    // Choose the lease amount of sweets
-    // That's our answer
+    // TODO: Trace the winning combo back to get the packet sizes.
 
-    let inc = amount;
+    let inc = maxAmount;
     while (count < 0 && inc > 0) {
         count = (table[packets.length - 1][inc] > amount)
             ? -1
