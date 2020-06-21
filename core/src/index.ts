@@ -1,3 +1,28 @@
+// Uses lookup table to find optimised packet groups for the given amount.
+const getGroup = (table, packets, maxAmount, activeSolution) => {
+    let group = [];
+    let inc = table.length - 1;
+    while (inc >= 0) {
+        if (table[packets.length - 1][activeSolution] > maxAmount) {
+            activeSolution--;
+        }
+        if (!table[inc - 1] || table[inc][activeSolution] !== table[inc - 1][activeSolution]) {
+            const amount = Math.floor(activeSolution / packets[inc]);
+            if (amount * packets[inc] <= activeSolution) {
+                group = [
+                    ...group,
+                    ...Array.from(new Array(amount)).map(() => packets[inc]),
+                ];
+            }
+            activeSolution = activeSolution - (amount * packets[inc]);
+        }
+        inc--;
+    }
+
+    return group;
+}
+
+// Creates a blank table template we can pass to the compute method
 const tableTemplate = (amount: number, packets: Array<number>) => {
     const row = Array.from(new Array(amount + 1)).map((_, i) => !i ? i : amount + 1);
     return [
@@ -7,7 +32,7 @@ const tableTemplate = (amount: number, packets: Array<number>) => {
     ];
 }
 
-
+// Populates a given table with all possible combination values.
 const compute = (amount: number, packets: Array<number>, tableTemplate) => {
     const table = [ ...tableTemplate ];
 
@@ -22,8 +47,8 @@ const compute = (amount: number, packets: Array<number>, tableTemplate) => {
                 ? table[j - 1][i]
                 : Math.min(table[j - 1][i], 1 + table[j][i - packets[j - 1]]);
         }
-    }
 
+    }
     return table;
 }
 
@@ -32,25 +57,31 @@ export const order = (amount: number, packets: Array<number>) => {
         return 0;
     }
 
+    // To avoid wastage we want to include the amount + our smallest packet size in our table.
+    // We can then use that as our upper limit if an exact match isn't found.
     const maxAmount = amount + packets[0];
 
     const template = tableTemplate(maxAmount, packets);
     const table : Array<Array<any>> = compute(maxAmount, packets, template).splice(1, packets.length);
-    let count : number = (table[packets.length - 1][amount] > maxAmount) ? -1 : table[packets.length - 1][amount];
 
-    if (count > 0) {
-        return count;
+    let solution : number = amount;
+    let count : number = (table[packets.length - 1][solution] > solution) ? -1 : table[packets.length - 1][solution];
+    let group = getGroup(table, packets, maxAmount, amount);
+    let activeSolution = maxAmount - 1;
+
+    while (count < 0 && activeSolution > 0) {
+        if (table[packets.length - 1][activeSolution] > maxAmount) {
+            count = -1
+        } else {
+            count = table[packets.length - 1][activeSolution];
+            group = getGroup(table, packets, maxAmount, activeSolution);
+            break;
+        }
+        activeSolution--;
     }
 
-    // TODO: Trace the winning combo back to get the packet sizes.
-
-    let inc = maxAmount;
-    while (count < 0 && inc > 0) {
-        count = (table[packets.length - 1][inc] > amount)
-            ? -1
-            : table[packets.length - 1][inc];
-        inc--;
-    }
-
-    return count;
+    return {
+        group,
+        total: group.reduce((a, b) => a + b, 0),
+    };
 }
