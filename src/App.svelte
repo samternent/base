@@ -1,6 +1,9 @@
 <script>
   import { order } from '@core';
 
+  // import { HomeIcon } from 'svelte-feather-icons';
+  // <HomeIcon size="1x" class="inline mr-2"/>
+
   let value = 250;
   let bags = [250, 500, 1000, 2000, 5000];
   $: results = order(parseInt(value, 10), bags);
