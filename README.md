@@ -1,5 +1,33 @@
 # Simon’s Sweet Shop Challenge
 
+https://sss.samternent.vercel.app/
+
+## Code Strcuture
+
+### Frontend
+The frontend is built in [Svelte](https://svelte.dev/blog/svelte-3-rethinking-reactivity).
+
+This was chosen for performance and simplicity. The frontend code is kept under the src directory.
+
+#### Development
+```javascript
+npm npm app-watch // start dev server
+```
+
+### Core
+Logic is written in Typescript and tested using [AVA](https://github.com/avajs/ava).
+
+This directory can be access through the frontend using the alias `@core`.
+
+#### Development
+```javascript
+npm npm core-test // run tests
+npm npm core-watch. // Watcher for development
+npm npm core-test-watch // tests with watcher
+```
+
+
+
 ## Background
 
 Simon’s Sweet Shop (SSS) is a confectionery wholesalerthat sells sweets in a
