@@ -1,23 +1,12 @@
 <script>
-  import { order } from '@core';
-
-  // import { HomeIcon } from 'svelte-feather-icons';
-  // <HomeIcon size="1x" class="inline mr-2"/>
-
-  let value = 250;
-  let bags = [250, 500, 1000, 2000, 5000];
-  $: results = order(parseInt(value, 10), bags);
-
+  import Tailwindcss from './components/Tailwindcss.svelte';
+  import SimonsSweetShop from './components/SimonsSweetShop.svelte';
+  import MadeWith from './components/MadeWith.svelte';
 </script>
 
-<input bind:value/>
-{#if results}
-  <p>
-    You can do this with {results.group.length} bag{results.group.length > 1 ? 's' : ''} and a total of {results.total} sweets.
-  </p>
-  <ul>
-  {#each results.group as packet}
-    <li>{packet}</li>
-  {/each}
-  </ul>
-{/if}
+<main class="flex flex-col text-center h-screen w-screen">
+  <SimonsSweetShop/>
+  <MadeWith/>
+</main>
+
+<Tailwindcss />

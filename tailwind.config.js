@@ -3,9 +3,12 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        concords: '#0286FF',
-        concordsdark: '#006DE6',
+        primary: '#663499',
       },
+      spacing: {
+        '96': '24rem',
+        '128': '32rem',
+      }
     },
   },
   variants: {},
