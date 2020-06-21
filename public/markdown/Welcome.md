@@ -2,6 +2,8 @@
 
 https://sss.samternent.vercel.app/
 
+https://github.com/samternent/base/tree/simons-sweet-shop
+
 ## Code Strcuture
 
 ### Frontend
