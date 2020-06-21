@@ -22,7 +22,7 @@
 	<title>🛍️ Simons Sweet Shop</title>
 </svelte:head>
 
-<div class="max-w-sm bg-white rounded shadow-lg mx-auto my-4 h-auto">
+<div class="bg-white h-auto pb-6">
   <div class="px-6 py-4">
       <h2 class="font-extrabold text-primary text-3xl mb-4">Simons Sweet Shop</h2>
       <input class="appearance-none block w-full bg-gray-100 text-gray-700 border rounded py-3 px-4 mb-2 leading-tight focus:outline-none focus:bg-white" bind:value type="number" min="1" max="50000" >

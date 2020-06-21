@@ -1,7 +1,7 @@
 <script>
 import { GithubIcon } from 'svelte-feather-icons';
 </script>
-<p class="font-thin">
+<p class="font-thin text-center p-4">
   Source on <a href="https://github.com/samternent/base/tree/simons-sweet-shop" class="hover:text-primary">
     <GithubIcon size="1.5x" class="inline font-thin"/> Github
   </a>
