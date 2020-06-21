@@ -3770,28 +3770,42 @@ var app = (function () {
 
     function create_fragment$5(ctx) {
     	let main;
-    	let section;
+    	let section0;
     	let simonssweetshop;
     	let t0;
     	let madewith;
     	let t1;
+    	let section1;
+    	let markdown;
+    	let t2;
     	let tailwindcss;
     	let current;
     	simonssweetshop = new SimonsSweetShop({ $$inline: true });
     	madewith = new MadeWith({ $$inline: true });
+
+    	markdown = new Markdown({
+    			props: { path: "Welcome" },
+    			$$inline: true
+    		});
+
     	tailwindcss = new Tailwindcss({ $$inline: true });
 
     	const block = {
     		c: function create() {
     			main = element("main");
-    			section = element("section");
+    			section0 = element("section");
     			create_component(simonssweetshop.$$.fragment);
     			t0 = space();
     			create_component(madewith.$$.fragment);
     			t1 = space();
+    			section1 = element("section");
+    			create_component(markdown.$$.fragment);
+    			t2 = space();
     			create_component(tailwindcss.$$.fragment);
-    			attr_dev(section, "class", "bg-white rounded shadow-lg flex-col flex justify-between");
-    			add_location(section, file$4, 8, 2, 389);
+    			attr_dev(section0, "class", "bg-white rounded shadow-lg flex-col flex justify-between");
+    			add_location(section0, file$4, 8, 2, 389);
+    			attr_dev(section1, "class", "flex-1");
+    			add_location(section1, file$4, 12, 2, 518);
     			attr_dev(main, "class", "flex flex max-h-screen flex-col md:flex-row overflow-x-hidden max-w-screen h-screen w-screen md:overflow-hidden");
     			add_location(main, file$4, 7, 0, 260);
     		},
@@ -3800,11 +3814,14 @@ var app = (function () {
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, main, anchor);
-    			append_dev(main, section);
-    			mount_component(simonssweetshop, section, null);
-    			append_dev(section, t0);
-    			mount_component(madewith, section, null);
-    			insert_dev(target, t1, anchor);
+    			append_dev(main, section0);
+    			mount_component(simonssweetshop, section0, null);
+    			append_dev(section0, t0);
+    			mount_component(madewith, section0, null);
+    			append_dev(main, t1);
+    			append_dev(main, section1);
+    			mount_component(markdown, section1, null);
+    			insert_dev(target, t2, anchor);
     			mount_component(tailwindcss, target, anchor);
     			current = true;
     		},
@@ -3813,12 +3830,14 @@ var app = (function () {
     			if (current) return;
     			transition_in(simonssweetshop.$$.fragment, local);
     			transition_in(madewith.$$.fragment, local);
+    			transition_in(markdown.$$.fragment, local);
     			transition_in(tailwindcss.$$.fragment, local);
     			current = true;
     		},
     		o: function outro(local) {
     			transition_out(simonssweetshop.$$.fragment, local);
     			transition_out(madewith.$$.fragment, local);
+    			transition_out(markdown.$$.fragment, local);
     			transition_out(tailwindcss.$$.fragment, local);
     			current = false;
     		},
@@ -3826,7 +3845,8 @@ var app = (function () {
     			if (detaching) detach_dev(main);
     			destroy_component(simonssweetshop);
     			destroy_component(madewith);
-    			if (detaching) detach_dev(t1);
+    			destroy_component(markdown);
+    			if (detaching) detach_dev(t2);
     			destroy_component(tailwindcss, detaching);
     		}
     	};
