@@ -6,7 +6,7 @@
 </script>
 
 <main class="flex flex max-h-screen flex-col md:flex-row overflow-x-hidden max-w-screen h-screen w-screen md:overflow-hidden">
-  <section class="bg-white rounded shadow-lg flex-col flex justify-between">
+  <section class="flex-0 bg-white rounded shadow-lg flex-col flex justify-between">
     <SimonsSweetShop/>
     <MadeWith/>
   </section>

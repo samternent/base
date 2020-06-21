@@ -3657,7 +3657,7 @@ var app = (function () {
     		c: function create() {
     			section = element("section");
     			if (if_block) if_block.c();
-    			attr_dev(section, "class", "markdown-body text-lg py-6 p-4 overflow-y-auto");
+    			attr_dev(section, "class", "shadow-inner markdown-body w-full h-full text-lg py-6 p-4 overflow-y-auto");
     			add_location(section, file$3, 13, 0, 240);
     		},
     		l: function claim(nodes) {
@@ -3802,10 +3802,10 @@ var app = (function () {
     			create_component(markdown.$$.fragment);
     			t2 = space();
     			create_component(tailwindcss.$$.fragment);
-    			attr_dev(section0, "class", "bg-white rounded shadow-lg flex-col flex justify-between");
+    			attr_dev(section0, "class", "flex-0 bg-white rounded shadow-lg flex-col flex justify-between");
     			add_location(section0, file$4, 8, 2, 389);
     			attr_dev(section1, "class", "flex-1");
-    			add_location(section1, file$4, 12, 2, 518);
+    			add_location(section1, file$4, 12, 2, 525);
     			attr_dev(main, "class", "flex flex max-h-screen flex-col md:flex-row overflow-x-hidden max-w-screen h-screen w-screen md:overflow-hidden");
     			add_location(main, file$4, 7, 0, 260);
     		},
