@@ -3657,7 +3657,7 @@ var app = (function () {
     		c: function create() {
     			section = element("section");
     			if (if_block) if_block.c();
-    			attr_dev(section, "class", "shadow-inner markdown-body w-full h-full text-lg py-6 p-4 overflow-y-auto");
+    			attr_dev(section, "class", "markdown-body text-lg py-6 p-4 overflow-y-auto");
     			add_location(section, file$3, 13, 0, 240);
     		},
     		l: function claim(nodes) {
@@ -3821,8 +3821,8 @@ var app = (function () {
     			append_dev(main, t1);
     			append_dev(main, section1);
     			mount_component(markdown, section1, null);
-    			insert_dev(target, t2, anchor);
-    			mount_component(tailwindcss, target, anchor);
+    			append_dev(main, t2);
+    			mount_component(tailwindcss, main, null);
     			current = true;
     		},
     		p: noop,
@@ -3846,8 +3846,7 @@ var app = (function () {
     			destroy_component(simonssweetshop);
     			destroy_component(madewith);
     			destroy_component(markdown);
-    			if (detaching) detach_dev(t2);
-    			destroy_component(tailwindcss, detaching);
+    			destroy_component(tailwindcss);
     		}
     	};
 

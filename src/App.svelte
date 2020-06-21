@@ -13,6 +13,5 @@
   <section class="flex-1">
     <Markdown path="Welcome"/>
   </section>
+  <Tailwindcss />
 </main>
-
-<Tailwindcss />
