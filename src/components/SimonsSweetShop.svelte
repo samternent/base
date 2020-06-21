@@ -32,7 +32,7 @@
       </p>
   </div>
   <div class="px-6 py-2">
-    {#each Object.keys(combinations) as packet}
+    {#each Object.keys(combinations).reverse() as packet}
       <p class="bg-gray-200 font-normal flex justify-between rounded-full px-3 py-1 text-sm text-gray-700 m-2">
         <span>{packet}</span>
         <span class="font-thin"><span class="text-l mr-2">🛍️ </span> x{combinations[packet] || 0}</span>

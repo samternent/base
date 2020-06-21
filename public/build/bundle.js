@@ -523,7 +523,7 @@ var app = (function () {
     	return child_ctx;
     }
 
-    // (35:4) {#each Object.keys(combinations) as packet}
+    // (35:4) {#each Object.keys(combinations).reverse() as packet}
     function create_each_block(ctx) {
     	let p;
     	let span0;
@@ -549,13 +549,13 @@ var app = (function () {
     			t3 = text(" x");
     			t4 = text(t4_value);
     			t5 = space();
-    			add_location(span0, file, 36, 8, 1238);
+    			add_location(span0, file, 36, 8, 1248);
     			attr_dev(span1, "class", "text-l mr-2");
-    			add_location(span1, file, 37, 32, 1292);
+    			add_location(span1, file, 37, 32, 1302);
     			attr_dev(span2, "class", "font-thin");
-    			add_location(span2, file, 37, 8, 1268);
+    			add_location(span2, file, 37, 8, 1278);
     			attr_dev(p, "class", "bg-gray-200 font-normal flex justify-between rounded-full px-3 py-1 text-sm text-gray-700 m-2");
-    			add_location(p, file, 35, 6, 1124);
+    			add_location(p, file, 35, 6, 1134);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, p, anchor);
@@ -581,7 +581,7 @@ var app = (function () {
     		block,
     		id: create_each_block.name,
     		type: "each",
-    		source: "(35:4) {#each Object.keys(combinations) as packet}",
+    		source: "(35:4) {#each Object.keys(combinations).reverse() as packet}",
     		ctx
     	});
 
@@ -607,7 +607,7 @@ var app = (function () {
     	let div1;
     	let mounted;
     	let dispose;
-    	let each_value = Object.keys(/*combinations*/ ctx[2]);
+    	let each_value = Object.keys(/*combinations*/ ctx[2]).reverse();
     	validate_each_argument(each_value);
     	let each_blocks = [];
 
@@ -710,7 +710,7 @@ var app = (function () {
     			if (dirty & /*results*/ 2 && t7_value !== (t7_value = /*results*/ ctx[1].total + "")) set_data_dev(t7, t7_value);
 
     			if (dirty & /*combinations, Object*/ 4) {
-    				each_value = Object.keys(/*combinations*/ ctx[2]);
+    				each_value = Object.keys(/*combinations*/ ctx[2]).reverse();
     				validate_each_argument(each_value);
     				let i;
 
