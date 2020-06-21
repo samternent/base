@@ -32,6 +32,7 @@
     "rollup-plugin-terser": "^6.1.0",
     "sirv-cli": "^0.4.4",
     "svelte": "^3.23.2",
+    "svelte-feather-icons": "^3.2.2",
     "ts-node": "^8.10.2",
     "tslint": "^6.1.2",
     "tslint-config-airbnb": "^5.11.2",
