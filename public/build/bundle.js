@@ -515,7 +515,7 @@ var app = (function () {
     	return child_ctx;
     }
 
-    // (30:4) {#each bags.reverse() as packet}
+    // (35:4) {#each bags.reverse() as packet}
     function create_each_block(ctx) {
     	let p;
     	let span0;
@@ -541,13 +541,13 @@ var app = (function () {
     			t3 = text(" x");
     			t4 = text(t4_value);
     			t5 = space();
-    			add_location(span0, file, 31, 8, 1158);
+    			add_location(span0, file, 36, 8, 1227);
     			attr_dev(span1, "class", "text-l mr-2");
-    			add_location(span1, file, 32, 32, 1212);
+    			add_location(span1, file, 37, 32, 1281);
     			attr_dev(span2, "class", "font-thin");
-    			add_location(span2, file, 32, 8, 1188);
+    			add_location(span2, file, 37, 8, 1257);
     			attr_dev(p, "class", "bg-gray-200 font-normal flex justify-between rounded-full px-3 py-1 text-sm text-gray-700 m-2");
-    			add_location(p, file, 30, 6, 1044);
+    			add_location(p, file, 35, 6, 1113);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, p, anchor);
@@ -572,7 +572,7 @@ var app = (function () {
     		block,
     		id: create_each_block.name,
     		type: "each",
-    		source: "(30:4) {#each bags.reverse() as packet}",
+    		source: "(35:4) {#each bags.reverse() as packet}",
     		ctx
     	});
 
@@ -580,20 +580,21 @@ var app = (function () {
     }
 
     function create_fragment$1(ctx) {
+    	let t0;
     	let div2;
     	let div0;
     	let h2;
-    	let t1;
-    	let input0;
     	let t2;
-    	let input1;
+    	let input0;
     	let t3;
+    	let input1;
+    	let t4;
     	let p;
     	let strong;
-    	let t5;
-    	let t6_value = /*results*/ ctx[1].total + "";
     	let t6;
+    	let t7_value = /*results*/ ctx[1].total + "";
     	let t7;
+    	let t8;
     	let div1;
     	let mounted;
     	let dispose;
@@ -607,68 +608,71 @@ var app = (function () {
 
     	const block = {
     		c: function create() {
+    			t0 = space();
     			div2 = element("div");
     			div0 = element("div");
     			h2 = element("h2");
     			h2.textContent = "Simons Sweet Shop";
-    			t1 = space();
-    			input0 = element("input");
     			t2 = space();
-    			input1 = element("input");
+    			input0 = element("input");
     			t3 = space();
+    			input1 = element("input");
+    			t4 = space();
     			p = element("p");
     			strong = element("strong");
     			strong.textContent = "Total Order:";
-    			t5 = space();
-    			t6 = text(t6_value);
-    			t7 = space();
+    			t6 = space();
+    			t7 = text(t7_value);
+    			t8 = space();
     			div1 = element("div");
 
     			for (let i = 0; i < each_blocks.length; i += 1) {
     				each_blocks[i].c();
     			}
 
+    			document.title = "🛍️ Simons Sweet Shop";
     			attr_dev(h2, "class", "font-extrabold text-primary text-3xl mb-4");
-    			add_location(h2, file, 21, 6, 486);
+    			add_location(h2, file, 26, 6, 555);
     			attr_dev(input0, "class", "appearance-none block w-full bg-gray-100 text-gray-700 border rounded py-3 px-4 mb-2 leading-tight focus:outline-none focus:bg-white");
     			attr_dev(input0, "type", "number");
     			attr_dev(input0, "min", "1");
     			attr_dev(input0, "max", "50000");
-    			add_location(input0, file, 22, 6, 569);
+    			add_location(input0, file, 27, 6, 638);
     			attr_dev(input1, "type", "range");
     			attr_dev(input1, "min", "1");
     			attr_dev(input1, "max", "50000");
     			attr_dev(input1, "class", "my-4 w-full");
-    			add_location(input1, file, 23, 6, 770);
-    			add_location(strong, file, 25, 8, 909);
+    			add_location(input1, file, 28, 6, 839);
+    			add_location(strong, file, 30, 8, 978);
     			attr_dev(p, "class", "text-gray-700 text-base pt-2 text-right");
-    			add_location(p, file, 24, 6, 849);
+    			add_location(p, file, 29, 6, 918);
     			attr_dev(div0, "class", "px-6 py-4");
-    			add_location(div0, file, 20, 2, 456);
+    			add_location(div0, file, 25, 2, 525);
     			attr_dev(div1, "class", "px-6 py-2");
-    			add_location(div1, file, 28, 2, 977);
+    			add_location(div1, file, 33, 2, 1046);
     			attr_dev(div2, "class", "max-w-sm bg-white rounded shadow-lg mx-auto my-4 h-auto");
-    			add_location(div2, file, 19, 0, 384);
+    			add_location(div2, file, 24, 0, 453);
     		},
     		l: function claim(nodes) {
     			throw new Error("options.hydrate only works if the component was compiled with the `hydratable: true` option");
     		},
     		m: function mount(target, anchor) {
+    			insert_dev(target, t0, anchor);
     			insert_dev(target, div2, anchor);
     			append_dev(div2, div0);
     			append_dev(div0, h2);
-    			append_dev(div0, t1);
+    			append_dev(div0, t2);
     			append_dev(div0, input0);
     			set_input_value(input0, /*value*/ ctx[0]);
-    			append_dev(div0, t2);
+    			append_dev(div0, t3);
     			append_dev(div0, input1);
     			set_input_value(input1, /*value*/ ctx[0]);
-    			append_dev(div0, t3);
+    			append_dev(div0, t4);
     			append_dev(div0, p);
     			append_dev(p, strong);
-    			append_dev(p, t5);
     			append_dev(p, t6);
-    			append_dev(div2, t7);
+    			append_dev(p, t7);
+    			append_dev(div2, t8);
     			append_dev(div2, div1);
 
     			for (let i = 0; i < each_blocks.length; i += 1) {
@@ -694,7 +698,7 @@ var app = (function () {
     				set_input_value(input1, /*value*/ ctx[0]);
     			}
 
-    			if (dirty & /*results*/ 2 && t6_value !== (t6_value = /*results*/ ctx[1].total + "")) set_data_dev(t6, t6_value);
+    			if (dirty & /*results*/ 2 && t7_value !== (t7_value = /*results*/ ctx[1].total + "")) set_data_dev(t7, t7_value);
 
     			if (dirty & /*combinations, bags*/ 12) {
     				each_value = /*bags*/ ctx[3].reverse();
@@ -723,6 +727,7 @@ var app = (function () {
     		i: noop,
     		o: noop,
     		d: function destroy(detaching) {
+    			if (detaching) detach_dev(t0);
     			if (detaching) detach_dev(div2);
     			destroy_each(each_blocks, detaching);
     			mounted = false;

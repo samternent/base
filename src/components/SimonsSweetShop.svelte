@@ -17,6 +17,11 @@
   }
 
 </script>
+
+<svelte:head>
+	<title>🛍️ Simons Sweet Shop</title>
+</svelte:head>
+
 <div class="max-w-sm bg-white rounded shadow-lg mx-auto my-4 h-auto">
   <div class="px-6 py-4">
       <h2 class="font-extrabold text-primary text-3xl mb-4">Simons Sweet Shop</h2>
