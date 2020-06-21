@@ -10,7 +10,7 @@
     <SimonsSweetShop/>
     <MadeWith/>
   </section>
-  <section class="flex-1">
+  <section class="flex-1 md:block hidden">
     <Markdown path="Welcome"/>
   </section>
   <Tailwindcss />

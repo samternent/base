@@ -3804,7 +3804,7 @@ var app = (function () {
     			create_component(tailwindcss.$$.fragment);
     			attr_dev(section0, "class", "flex-0 bg-white rounded shadow-lg flex-col flex justify-between");
     			add_location(section0, file$4, 8, 2, 389);
-    			attr_dev(section1, "class", "flex-1");
+    			attr_dev(section1, "class", "flex-1 md:block hidden");
     			add_location(section1, file$4, 12, 2, 525);
     			attr_dev(main, "class", "flex flex max-h-screen flex-col md:flex-row overflow-x-hidden max-w-screen h-screen w-screen md:overflow-hidden");
     			add_location(main, file$4, 7, 0, 260);
