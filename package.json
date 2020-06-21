@@ -52,8 +52,5 @@
     "require": [
       "ts-node/register"
     ]
-  },
-  "dependencies": {
-    "lodash": "^4.17.15"
   }
 }
