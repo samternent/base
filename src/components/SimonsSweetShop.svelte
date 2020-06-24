@@ -56,7 +56,7 @@
       </section>
   </div>
   <div class="px-6 py-4 w-100">
-      <section class="flex flex-wrap justify-between">
+      <section class="flex flex-wrap">
       {#each bags as bag}
         <p on:click={() => remove(bag)} class="bg-purple-100 text-gray-800 font-normal cursor-pointer flex rounded-full px-3 text-xs m-1 py-1">
           <span class="mr-4">{bag}</span> <DeleteIcon size="1.5x"/>

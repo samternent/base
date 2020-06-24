@@ -956,9 +956,9 @@ var app = (function () {
     			create_component(deleteicon.$$.fragment);
     			t2 = space();
     			attr_dev(span, "class", "mr-4");
-    			add_location(span, file$2, 61, 10, 2010);
+    			add_location(span, file$2, 61, 10, 1994);
     			attr_dev(p, "class", "bg-purple-100 text-gray-800 font-normal cursor-pointer flex rounded-full px-3 text-xs m-1 py-1");
-    			add_location(p, file$2, 60, 8, 1864);
+    			add_location(p, file$2, 60, 8, 1848);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, p, anchor);
@@ -1107,15 +1107,15 @@ var app = (function () {
     			add_location(section0, file$2, 48, 6, 1325);
     			attr_dev(div0, "class", "px-6 py-4");
     			add_location(div0, file$2, 41, 2, 891);
-    			attr_dev(section1, "class", "flex flex-wrap justify-between");
+    			attr_dev(section1, "class", "flex flex-wrap");
     			add_location(section1, file$2, 58, 6, 1781);
     			attr_dev(input2, "class", "bg-gray-100 p-2 border-solid rounded border border-gray-400");
-    			add_location(input2, file$2, 65, 8, 2167);
-    			add_location(span, file$2, 67, 10, 2415);
+    			add_location(input2, file$2, 65, 8, 2151);
+    			add_location(span, file$2, 67, 10, 2399);
     			attr_dev(button, "class", "bg-purple-600 hover:bg-purple-700 text-gray-200 font-bold py-2 px-4 rounded inline-flex items-center");
-    			add_location(button, file$2, 66, 8, 2272);
+    			add_location(button, file$2, 66, 8, 2256);
     			attr_dev(p1, "class", "font-normal flex justify-between m-2 py-4");
-    			add_location(p1, file$2, 64, 6, 2105);
+    			add_location(p1, file$2, 64, 6, 2089);
     			attr_dev(div1, "class", "px-6 py-4 w-100");
     			add_location(div1, file$2, 57, 2, 1745);
     			attr_dev(div2, "class", "bg-white py-6 border rounded w-100");
