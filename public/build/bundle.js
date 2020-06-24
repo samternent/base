@@ -863,7 +863,7 @@ var app = (function () {
     	return child_ctx;
     }
 
-    // (51:8) {#each Object.keys(combinations) as packet}
+    // (50:8) {#each Object.keys(combinations) as packet}
     function create_each_block_1(ctx) {
     	let p;
     	let span0;
@@ -890,13 +890,13 @@ var app = (function () {
     			t4 = text(t4_value);
     			t5 = space();
     			attr_dev(span0, "class", "mr-4");
-    			add_location(span0, file$2, 52, 12, 1675);
+    			add_location(span0, file$2, 51, 12, 1559);
     			attr_dev(span1, "class", "text-l mr-2");
-    			add_location(span1, file$2, 53, 36, 1746);
+    			add_location(span1, file$2, 52, 36, 1630);
     			attr_dev(span2, "class", "font-thin");
-    			add_location(span2, file$2, 53, 12, 1722);
+    			add_location(span2, file$2, 52, 12, 1606);
     			attr_dev(p, "class", "bg-gray-100 font-normal flex rounded-full px-3 text-xs text-gray-700 m-1 py-1");
-    			add_location(p, file$2, 51, 10, 1573);
+    			add_location(p, file$2, 50, 10, 1457);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, p, anchor);
@@ -922,14 +922,14 @@ var app = (function () {
     		block,
     		id: create_each_block_1.name,
     		type: "each",
-    		source: "(51:8) {#each Object.keys(combinations) as packet}",
+    		source: "(50:8) {#each Object.keys(combinations) as packet}",
     		ctx
     	});
 
     	return block;
     }
 
-    // (61:6) {#each bags as bag}
+    // (60:6) {#each bags as bag}
     function create_each_block(ctx) {
     	let p;
     	let span;
@@ -956,9 +956,9 @@ var app = (function () {
     			create_component(deleteicon.$$.fragment);
     			t2 = space();
     			attr_dev(span, "class", "mr-4");
-    			add_location(span, file$2, 62, 10, 2144);
+    			add_location(span, file$2, 61, 10, 2028);
     			attr_dev(p, "class", "bg-purple-100 text-gray-800 font-normal cursor-pointer flex rounded-full px-3 text-xs m-1 py-1");
-    			add_location(p, file$2, 61, 8, 1998);
+    			add_location(p, file$2, 60, 8, 1882);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, p, anchor);
@@ -999,7 +999,7 @@ var app = (function () {
     		block,
     		id: create_each_block.name,
     		type: "each",
-    		source: "(61:6) {#each bags as bag}",
+    		source: "(60:6) {#each bags as bag}",
     		ctx
     	});
 
@@ -1010,26 +1010,24 @@ var app = (function () {
     	let t0;
     	let div2;
     	let div0;
-    	let h2;
-    	let t2;
     	let input0;
-    	let t3;
+    	let t1;
     	let input1;
-    	let t4;
+    	let t2;
     	let p0;
     	let strong;
+    	let t4;
+    	let t5_value = /*results*/ ctx[2].total + "";
+    	let t5;
     	let t6;
-    	let t7_value = /*results*/ ctx[2].total + "";
-    	let t7;
-    	let t8;
     	let section0;
-    	let t9;
+    	let t7;
     	let div1;
     	let section1;
-    	let t10;
+    	let t8;
     	let p1;
     	let input2;
-    	let t11;
+    	let t9;
     	let button;
     	let span;
     	let current;
@@ -1060,26 +1058,23 @@ var app = (function () {
     			t0 = space();
     			div2 = element("div");
     			div0 = element("div");
-    			h2 = element("h2");
-    			h2.textContent = "Simons Sweet Shop";
-    			t2 = space();
     			input0 = element("input");
-    			t3 = space();
+    			t1 = space();
     			input1 = element("input");
-    			t4 = space();
+    			t2 = space();
     			p0 = element("p");
     			strong = element("strong");
     			strong.textContent = "Total Order:";
+    			t4 = space();
+    			t5 = text(t5_value);
     			t6 = space();
-    			t7 = text(t7_value);
-    			t8 = space();
     			section0 = element("section");
 
     			for (let i = 0; i < each_blocks_1.length; i += 1) {
     				each_blocks_1[i].c();
     			}
 
-    			t9 = space();
+    			t7 = space();
     			div1 = element("div");
     			section1 = element("section");
 
@@ -1087,45 +1082,43 @@ var app = (function () {
     				each_blocks[i].c();
     			}
 
-    			t10 = space();
+    			t8 = space();
     			p1 = element("p");
     			input2 = element("input");
-    			t11 = space();
+    			t9 = space();
     			button = element("button");
     			span = element("span");
     			span.textContent = "Add";
     			document.title = "🛍️ Simons Sweet Shop";
-    			attr_dev(h2, "class", "font-extrabold text-purple-700 text-3xl mb-4");
-    			add_location(h2, file$2, 42, 6, 969);
     			attr_dev(input0, "class", "appearance-none block w-full bg-gray-100 text-gray-700 border rounded py-3 px-4 mb-2 leading-tight focus:outline-none focus:bg-white");
     			attr_dev(input0, "type", "number");
     			attr_dev(input0, "min", "1");
     			attr_dev(input0, "max", "50000");
-    			add_location(input0, file$2, 43, 6, 1055);
+    			add_location(input0, file$2, 42, 6, 939);
     			attr_dev(input1, "type", "range");
     			attr_dev(input1, "min", "1");
     			attr_dev(input1, "max", "50000");
     			attr_dev(input1, "class", "my-4 w-full");
-    			add_location(input1, file$2, 44, 6, 1256);
-    			add_location(strong, file$2, 46, 8, 1395);
+    			add_location(input1, file$2, 43, 6, 1140);
+    			add_location(strong, file$2, 45, 8, 1279);
     			attr_dev(p0, "class", "text-gray-700 text-base pt-2 text-right");
-    			add_location(p0, file$2, 45, 6, 1335);
+    			add_location(p0, file$2, 44, 6, 1219);
     			attr_dev(section0, "class", "flex flex-wrap justify-start pt-6");
-    			add_location(section0, file$2, 49, 6, 1459);
+    			add_location(section0, file$2, 48, 6, 1343);
     			attr_dev(div0, "class", "px-6 py-4");
-    			add_location(div0, file$2, 41, 2, 939);
+    			add_location(div0, file$2, 41, 2, 909);
     			attr_dev(section1, "class", "flex flex-wrap justify-between");
-    			add_location(section1, file$2, 59, 6, 1915);
+    			add_location(section1, file$2, 58, 6, 1799);
     			attr_dev(input2, "class", "bg-gray-100 p-2 border-solid rounded border border-gray-400");
-    			add_location(input2, file$2, 66, 8, 2301);
-    			add_location(span, file$2, 68, 10, 2549);
+    			add_location(input2, file$2, 65, 8, 2185);
+    			add_location(span, file$2, 67, 10, 2433);
     			attr_dev(button, "class", "bg-purple-600 hover:bg-purple-700 text-gray-200 font-bold py-2 px-4 rounded inline-flex items-center");
-    			add_location(button, file$2, 67, 8, 2406);
+    			add_location(button, file$2, 66, 8, 2290);
     			attr_dev(p1, "class", "font-normal flex justify-between m-2 py-4");
-    			add_location(p1, file$2, 65, 6, 2239);
+    			add_location(p1, file$2, 64, 6, 2123);
     			attr_dev(div1, "class", "px-6 py-4 w-100");
-    			add_location(div1, file$2, 58, 2, 1879);
-    			attr_dev(div2, "class", "bg-white pb-6 border rounded shadow-lg max-w-screen-sm text-align-center container svelte-1tyn1tj");
+    			add_location(div1, file$2, 57, 2, 1763);
+    			attr_dev(div2, "class", "bg-white py-6 border rounded text-align-center w-100");
     			add_location(div2, file$2, 40, 0, 840);
     		},
     		l: function claim(nodes) {
@@ -1135,26 +1128,24 @@ var app = (function () {
     			insert_dev(target, t0, anchor);
     			insert_dev(target, div2, anchor);
     			append_dev(div2, div0);
-    			append_dev(div0, h2);
-    			append_dev(div0, t2);
     			append_dev(div0, input0);
     			set_input_value(input0, /*value*/ ctx[0]);
-    			append_dev(div0, t3);
+    			append_dev(div0, t1);
     			append_dev(div0, input1);
     			set_input_value(input1, /*value*/ ctx[0]);
-    			append_dev(div0, t4);
+    			append_dev(div0, t2);
     			append_dev(div0, p0);
     			append_dev(p0, strong);
-    			append_dev(p0, t6);
-    			append_dev(p0, t7);
-    			append_dev(div0, t8);
+    			append_dev(p0, t4);
+    			append_dev(p0, t5);
+    			append_dev(div0, t6);
     			append_dev(div0, section0);
 
     			for (let i = 0; i < each_blocks_1.length; i += 1) {
     				each_blocks_1[i].m(section0, null);
     			}
 
-    			append_dev(div2, t9);
+    			append_dev(div2, t7);
     			append_dev(div2, div1);
     			append_dev(div1, section1);
 
@@ -1162,11 +1153,11 @@ var app = (function () {
     				each_blocks[i].m(section1, null);
     			}
 
-    			append_dev(div1, t10);
+    			append_dev(div1, t8);
     			append_dev(div1, p1);
     			append_dev(p1, input2);
     			set_input_value(input2, /*newBag*/ ctx[4]);
-    			append_dev(p1, t11);
+    			append_dev(p1, t9);
     			append_dev(p1, button);
     			append_dev(button, span);
     			current = true;
@@ -1192,7 +1183,7 @@ var app = (function () {
     				set_input_value(input1, /*value*/ ctx[0]);
     			}
 
-    			if ((!current || dirty & /*results*/ 4) && t7_value !== (t7_value = /*results*/ ctx[2].total + "")) set_data_dev(t7, t7_value);
+    			if ((!current || dirty & /*results*/ 4) && t5_value !== (t5_value = /*results*/ ctx[2].total + "")) set_data_dev(t5, t5_value);
 
     			if (dirty & /*combinations, Object*/ 8) {
     				each_value_1 = Object.keys(/*combinations*/ ctx[3]);
@@ -4165,11 +4156,18 @@ var app = (function () {
     const file$5 = "src/App.svelte";
 
     function create_fragment$6(ctx) {
-    	let main;
-    	let simonssweetshop;
-    	let t0;
-    	let madewith;
+    	let div5;
+    	let div4;
+    	let div0;
+    	let h2;
     	let t1;
+    	let div3;
+    	let div1;
+    	let simonssweetshop;
+    	let t2;
+    	let div2;
+    	let madewith;
+    	let t3;
     	let tailwindcss;
     	let current;
     	simonssweetshop = new SimonsSweetShop({ $$inline: true });
@@ -4178,25 +4176,52 @@ var app = (function () {
 
     	const block = {
     		c: function create() {
-    			main = element("main");
-    			create_component(simonssweetshop.$$.fragment);
-    			t0 = space();
-    			create_component(madewith.$$.fragment);
+    			div5 = element("div");
+    			div4 = element("div");
+    			div0 = element("div");
+    			h2 = element("h2");
+    			h2.textContent = "Simons Sweet Shop";
     			t1 = space();
+    			div3 = element("div");
+    			div1 = element("div");
+    			create_component(simonssweetshop.$$.fragment);
+    			t2 = space();
+    			div2 = element("div");
+    			create_component(madewith.$$.fragment);
+    			t3 = space();
     			create_component(tailwindcss.$$.fragment);
-    			attr_dev(main, "class", "flex items-center justify-center h-screen flex-col");
-    			add_location(main, file$5, 7, 0, 260);
+    			attr_dev(h2, "class", "font-extrabold text-white text-xl bg-purple-900 p-6 mb-4");
+    			add_location(h2, file$5, 13, 10, 477);
+    			attr_dev(div0, "class", "flex justify-center md:justify-start pt-12 md:pl-12 md:-mb-24");
+    			add_location(div0, file$5, 12, 6, 391);
+    			attr_dev(div1, "class", "flex flex-col pt-4 md:pt-8");
+    			add_location(div1, file$5, 17, 8, 710);
+    			attr_dev(div2, "class", "text-center pt-12 pb-12");
+    			add_location(div2, file$5, 20, 8, 805);
+    			attr_dev(div3, "class", "flex flex-col justify-center md:justify-start my-auto pt-8 md:pt-0 px-8 md:px-24 lg:px-32 md:mt-20");
+    			add_location(div3, file$5, 16, 6, 589);
+    			attr_dev(div4, "class", "w-full lg:w-1/2 flex flex-col");
+    			add_location(div4, file$5, 10, 2, 340);
+    			attr_dev(div5, "class", "w-full flex flex-wrap justify-center");
+    			add_location(div5, file$5, 7, 1, 261);
     		},
     		l: function claim(nodes) {
     			throw new Error("options.hydrate only works if the component was compiled with the `hydratable: true` option");
     		},
     		m: function mount(target, anchor) {
-    			insert_dev(target, main, anchor);
-    			mount_component(simonssweetshop, main, null);
-    			append_dev(main, t0);
-    			mount_component(madewith, main, null);
-    			append_dev(main, t1);
-    			mount_component(tailwindcss, main, null);
+    			insert_dev(target, div5, anchor);
+    			append_dev(div5, div4);
+    			append_dev(div4, div0);
+    			append_dev(div0, h2);
+    			append_dev(div4, t1);
+    			append_dev(div4, div3);
+    			append_dev(div3, div1);
+    			mount_component(simonssweetshop, div1, null);
+    			append_dev(div3, t2);
+    			append_dev(div3, div2);
+    			mount_component(madewith, div2, null);
+    			insert_dev(target, t3, anchor);
+    			mount_component(tailwindcss, target, anchor);
     			current = true;
     		},
     		p: noop,
@@ -4214,10 +4239,11 @@ var app = (function () {
     			current = false;
     		},
     		d: function destroy(detaching) {
-    			if (detaching) detach_dev(main);
+    			if (detaching) detach_dev(div5);
     			destroy_component(simonssweetshop);
     			destroy_component(madewith);
-    			destroy_component(tailwindcss);
+    			if (detaching) detach_dev(t3);
+    			destroy_component(tailwindcss, detaching);
     		}
     	};
 

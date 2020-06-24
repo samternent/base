@@ -38,9 +38,8 @@
 	<title>🛍️ Simons Sweet Shop</title>
 </svelte:head>
 
-<div class="bg-white pb-6 border rounded shadow-lg max-w-screen-sm text-align-center container">
+<div class="bg-white py-6 border rounded text-align-center w-100">
   <div class="px-6 py-4">
-      <h2 class="font-extrabold text-purple-700 text-3xl mb-4">Simons Sweet Shop</h2>
       <input class="appearance-none block w-full bg-gray-100 text-gray-700 border rounded py-3 px-4 mb-2 leading-tight focus:outline-none focus:bg-white" bind:value type="number" min="1" max="50000" >
       <input type="range" min="1" max="50000" bind:value class="my-4 w-full"/>
       <p class="text-gray-700 text-base pt-2 text-right">
@@ -71,9 +70,3 @@
       </p>
   </div>
 </div>
-<style>
-.container {
-  max-width: 620px;
-  width: 100%;
-}
-</style>
