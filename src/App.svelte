@@ -5,13 +5,8 @@
   import Markdown from './components/Markdown.svelte';
 </script>
 
-<main class="flex flex max-h-screen flex-col md:flex-row overflow-x-hidden max-w-screen h-screen w-screen md:overflow-hidden">
-  <section class="flex-0 bg-white rounded shadow-lg flex-col flex justify-between">
-    <SimonsSweetShop/>
-    <MadeWith/>
-  </section>
-  <section class="flex-1 md:block hidden">
-    <Markdown path="Welcome"/>
-  </section>
+<main class="flex items-center justify-center h-screen flex-col">
+  <SimonsSweetShop/>
+  <MadeWith/>
   <Tailwindcss />
 </main>
