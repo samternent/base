@@ -890,13 +890,13 @@ var app = (function () {
     			t4 = text(t4_value);
     			t5 = space();
     			attr_dev(span0, "class", "mr-4");
-    			add_location(span0, file$2, 51, 12, 1559);
+    			add_location(span0, file$2, 51, 12, 1541);
     			attr_dev(span1, "class", "text-l mr-2");
-    			add_location(span1, file$2, 52, 36, 1630);
+    			add_location(span1, file$2, 52, 36, 1612);
     			attr_dev(span2, "class", "font-thin");
-    			add_location(span2, file$2, 52, 12, 1606);
+    			add_location(span2, file$2, 52, 12, 1588);
     			attr_dev(p, "class", "bg-gray-100 font-normal flex rounded-full px-3 text-xs text-gray-700 m-1 py-1");
-    			add_location(p, file$2, 50, 10, 1457);
+    			add_location(p, file$2, 50, 10, 1439);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, p, anchor);
@@ -956,9 +956,9 @@ var app = (function () {
     			create_component(deleteicon.$$.fragment);
     			t2 = space();
     			attr_dev(span, "class", "mr-4");
-    			add_location(span, file$2, 61, 10, 2028);
+    			add_location(span, file$2, 61, 10, 2010);
     			attr_dev(p, "class", "bg-purple-100 text-gray-800 font-normal cursor-pointer flex rounded-full px-3 text-xs m-1 py-1");
-    			add_location(p, file$2, 60, 8, 1882);
+    			add_location(p, file$2, 60, 8, 1864);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, p, anchor);
@@ -1094,31 +1094,31 @@ var app = (function () {
     			attr_dev(input0, "type", "number");
     			attr_dev(input0, "min", "1");
     			attr_dev(input0, "max", "50000");
-    			add_location(input0, file$2, 42, 6, 939);
+    			add_location(input0, file$2, 42, 6, 921);
     			attr_dev(input1, "type", "range");
     			attr_dev(input1, "min", "1");
     			attr_dev(input1, "max", "50000");
     			attr_dev(input1, "class", "my-4 w-full");
-    			add_location(input1, file$2, 43, 6, 1140);
-    			add_location(strong, file$2, 45, 8, 1279);
+    			add_location(input1, file$2, 43, 6, 1122);
+    			add_location(strong, file$2, 45, 8, 1261);
     			attr_dev(p0, "class", "text-gray-700 text-base pt-2 text-right");
-    			add_location(p0, file$2, 44, 6, 1219);
+    			add_location(p0, file$2, 44, 6, 1201);
     			attr_dev(section0, "class", "flex flex-wrap justify-start pt-6");
-    			add_location(section0, file$2, 48, 6, 1343);
+    			add_location(section0, file$2, 48, 6, 1325);
     			attr_dev(div0, "class", "px-6 py-4");
-    			add_location(div0, file$2, 41, 2, 909);
+    			add_location(div0, file$2, 41, 2, 891);
     			attr_dev(section1, "class", "flex flex-wrap justify-between");
-    			add_location(section1, file$2, 58, 6, 1799);
+    			add_location(section1, file$2, 58, 6, 1781);
     			attr_dev(input2, "class", "bg-gray-100 p-2 border-solid rounded border border-gray-400");
-    			add_location(input2, file$2, 65, 8, 2185);
-    			add_location(span, file$2, 67, 10, 2433);
+    			add_location(input2, file$2, 65, 8, 2167);
+    			add_location(span, file$2, 67, 10, 2415);
     			attr_dev(button, "class", "bg-purple-600 hover:bg-purple-700 text-gray-200 font-bold py-2 px-4 rounded inline-flex items-center");
-    			add_location(button, file$2, 66, 8, 2290);
+    			add_location(button, file$2, 66, 8, 2272);
     			attr_dev(p1, "class", "font-normal flex justify-between m-2 py-4");
-    			add_location(p1, file$2, 64, 6, 2123);
+    			add_location(p1, file$2, 64, 6, 2105);
     			attr_dev(div1, "class", "px-6 py-4 w-100");
-    			add_location(div1, file$2, 57, 2, 1763);
-    			attr_dev(div2, "class", "bg-white py-6 border rounded text-align-center w-100");
+    			add_location(div1, file$2, 57, 2, 1745);
+    			attr_dev(div2, "class", "bg-white py-6 border rounded w-100");
     			add_location(div2, file$2, 40, 0, 840);
     		},
     		l: function claim(nodes) {
@@ -4044,7 +4044,7 @@ var app = (function () {
     		c: function create() {
     			section = element("section");
     			if (if_block) if_block.c();
-    			attr_dev(section, "class", "shadow-inner markdown-body w-full h-full text-lg py-6 p-4 overflow-y-auto");
+    			attr_dev(section, "class", "shadow-inner bg-white markdown-body w-full h-full text-lg py-6 p-4 overflow-y-auto");
     			add_location(section, file$4, 13, 0, 240);
     		},
     		l: function claim(nodes) {
@@ -4156,18 +4156,15 @@ var app = (function () {
     const file$5 = "src/App.svelte";
 
     function create_fragment$6(ctx) {
-    	let div5;
     	let div4;
-    	let div0;
-    	let h2;
-    	let t1;
     	let div3;
-    	let div1;
-    	let simonssweetshop;
-    	let t2;
     	let div2;
+    	let div0;
+    	let simonssweetshop;
+    	let t0;
+    	let div1;
     	let madewith;
-    	let t3;
+    	let t1;
     	let tailwindcss;
     	let current;
     	simonssweetshop = new SimonsSweetShop({ $$inline: true });
@@ -4176,51 +4173,40 @@ var app = (function () {
 
     	const block = {
     		c: function create() {
-    			div5 = element("div");
     			div4 = element("div");
-    			div0 = element("div");
-    			h2 = element("h2");
-    			h2.textContent = "Simons Sweet Shop";
-    			t1 = space();
     			div3 = element("div");
-    			div1 = element("div");
-    			create_component(simonssweetshop.$$.fragment);
-    			t2 = space();
     			div2 = element("div");
+    			div0 = element("div");
+    			create_component(simonssweetshop.$$.fragment);
+    			t0 = space();
+    			div1 = element("div");
     			create_component(madewith.$$.fragment);
-    			t3 = space();
+    			t1 = space();
     			create_component(tailwindcss.$$.fragment);
-    			attr_dev(h2, "class", "font-extrabold text-white text-xl bg-purple-900 p-6 mb-4");
-    			add_location(h2, file$5, 13, 10, 477);
-    			attr_dev(div0, "class", "flex justify-center md:justify-start pt-12 md:pl-12 md:-mb-24");
-    			add_location(div0, file$5, 12, 6, 391);
-    			attr_dev(div1, "class", "flex flex-col pt-4 md:pt-8");
-    			add_location(div1, file$5, 17, 8, 710);
-    			attr_dev(div2, "class", "text-center pt-12 pb-12");
-    			add_location(div2, file$5, 20, 8, 805);
-    			attr_dev(div3, "class", "flex flex-col justify-center md:justify-start my-auto pt-8 md:pt-0 px-8 md:px-24 lg:px-32 md:mt-20");
-    			add_location(div3, file$5, 16, 6, 589);
-    			attr_dev(div4, "class", "w-full lg:w-1/2 flex flex-col");
-    			add_location(div4, file$5, 10, 2, 340);
-    			attr_dev(div5, "class", "w-full flex flex-wrap justify-center");
-    			add_location(div5, file$5, 7, 1, 261);
+    			attr_dev(div0, "class", "flex flex-col pt-4 md:pt-8");
+    			add_location(div0, file$5, 10, 8, 489);
+    			attr_dev(div1, "class", "text-center pt-12 pb-12");
+    			add_location(div1, file$5, 16, 8, 681);
+    			attr_dev(div2, "class", "flex flex-col justify-center md:justify-start my-auto pt-4 md:pt-0 md:px-18 lg:px-18 xl:px-24 md:mt-20");
+    			add_location(div2, file$5, 9, 6, 364);
+    			attr_dev(div3, "class", "w-full lg:w-1/2 flex flex-col");
+    			add_location(div3, file$5, 8, 2, 314);
+    			attr_dev(div4, "class", "w-full flex flex-wrap justify-center");
+    			add_location(div4, file$5, 7, 1, 261);
     		},
     		l: function claim(nodes) {
     			throw new Error("options.hydrate only works if the component was compiled with the `hydratable: true` option");
     		},
     		m: function mount(target, anchor) {
-    			insert_dev(target, div5, anchor);
-    			append_dev(div5, div4);
-    			append_dev(div4, div0);
-    			append_dev(div0, h2);
-    			append_dev(div4, t1);
+    			insert_dev(target, div4, anchor);
     			append_dev(div4, div3);
-    			append_dev(div3, div1);
-    			mount_component(simonssweetshop, div1, null);
-    			append_dev(div3, t2);
     			append_dev(div3, div2);
-    			mount_component(madewith, div2, null);
-    			insert_dev(target, t3, anchor);
+    			append_dev(div2, div0);
+    			mount_component(simonssweetshop, div0, null);
+    			append_dev(div2, t0);
+    			append_dev(div2, div1);
+    			mount_component(madewith, div1, null);
+    			insert_dev(target, t1, anchor);
     			mount_component(tailwindcss, target, anchor);
     			current = true;
     		},
@@ -4239,10 +4225,10 @@ var app = (function () {
     			current = false;
     		},
     		d: function destroy(detaching) {
-    			if (detaching) detach_dev(div5);
+    			if (detaching) detach_dev(div4);
     			destroy_component(simonssweetshop);
     			destroy_component(madewith);
-    			if (detaching) detach_dev(t3);
+    			if (detaching) detach_dev(t1);
     			destroy_component(tailwindcss, detaching);
     		}
     	};

@@ -38,7 +38,7 @@
 	<title>🛍️ Simons Sweet Shop</title>
 </svelte:head>
 
-<div class="bg-white py-6 border rounded text-align-center w-100">
+<div class="bg-white py-6 border rounded w-100">
   <div class="px-6 py-4">
       <input class="appearance-none block w-full bg-gray-100 text-gray-700 border rounded py-3 px-4 mb-2 leading-tight focus:outline-none focus:bg-white" bind:value type="number" min="1" max="50000" >
       <input type="range" min="1" max="50000" bind:value class="my-4 w-full"/>

@@ -11,7 +11,7 @@
   });
 
 </script>
-<section class="shadow-inner markdown-body w-full h-full text-lg py-6 p-4 overflow-y-auto">
+<section class="shadow-inner bg-white markdown-body w-full h-full text-lg py-6 p-4 overflow-y-auto">
   {#if content}
     {@html marked(content)}
   {/if}
