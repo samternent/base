@@ -1097,7 +1097,7 @@ var app = (function () {
     			add_location(input0, file$2, 42, 6, 921);
     			attr_dev(input1, "type", "range");
     			attr_dev(input1, "min", "1");
-    			attr_dev(input1, "max", "50000");
+    			attr_dev(input1, "max", "30000");
     			attr_dev(input1, "class", "my-4 w-full");
     			add_location(input1, file$2, 43, 6, 1122);
     			add_location(strong, file$2, 45, 8, 1261);
