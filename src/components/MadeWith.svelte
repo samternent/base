@@ -1,8 +1,15 @@
 <script>
-import { GithubIcon } from 'svelte-feather-icons';
+import { AtSignIcon, InstagramIcon } from 'svelte-feather-icons';
 </script>
+<!-- <p class="font-thin text-center p-4">
+  <InstagramIcon size="1.5x" class="inline"/>
+  <a href={`https://instagram.com/samwithdaughters`} class="hover:text-primary">
+    samwithdaughters
+  </a>
+</p> -->
 <p class="font-thin text-center p-4">
-  Source on <a href="https://github.com/samternent/base/tree/simons-sweet-shop" class="hover:text-primary">
-    <GithubIcon size="1.5x" class="inline font-thin"/> Github
+  <AtSignIcon size="1.5x" class="inline"/>
+  <a href="mailto:sam@ternent.dev" class="hover:text-primary">
+    sam@ternent.dev
   </a>
 </p>
