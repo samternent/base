@@ -4831,21 +4831,19 @@ var app = (function () {
     const file$a = "src/App.svelte";
 
     function create_fragment$b(ctx) {
-    	let div5;
     	let div4;
+    	let div3;
     	let div0;
     	let h1;
     	let t1;
     	let githublink;
     	let t2;
     	let div1;
+    	let markdown;
     	let t3;
     	let div2;
-    	let markdown;
-    	let t4;
-    	let div3;
     	let madewith;
-    	let t5;
+    	let t4;
     	let tailwindcss;
     	let current;
     	githublink = new GithubLink({ $$inline: true });
@@ -4860,8 +4858,8 @@ var app = (function () {
 
     	const block = {
     		c: function create() {
-    			div5 = element("div");
     			div4 = element("div");
+    			div3 = element("div");
     			div0 = element("div");
     			h1 = element("h1");
     			h1.textContent = "@samternent";
@@ -4869,48 +4867,42 @@ var app = (function () {
     			create_component(githublink.$$.fragment);
     			t2 = space();
     			div1 = element("div");
+    			create_component(markdown.$$.fragment);
     			t3 = space();
     			div2 = element("div");
-    			create_component(markdown.$$.fragment);
-    			t4 = space();
-    			div3 = element("div");
     			create_component(madewith.$$.fragment);
-    			t5 = space();
+    			t4 = space();
     			create_component(tailwindcss.$$.fragment);
     			attr_dev(h1, "class", "text-2xl font-extrabold");
     			add_location(h1, file$a, 13, 6, 658);
     			attr_dev(div0, "class", "text-center pt-6 pb-6");
     			add_location(div0, file$a, 12, 4, 616);
     			attr_dev(div1, "class", "flex flex-col pt-4 md:pt-8 text-center");
-    			add_location(div1, file$a, 21, 4, 820);
-    			attr_dev(div2, "class", "flex flex-col pt-4 md:pt-8 text-center");
-    			add_location(div2, file$a, 25, 4, 919);
-    			attr_dev(div3, "class", "text-center pt-12 pb-12");
-    			add_location(div3, file$a, 29, 4, 1021);
-    			attr_dev(div4, "class", "w-full lg:w-1/2 flex flex-col justify-center md:justify-start my-auto pt-4 md:pt-0 md:px-18 lg:px-18 xl:px-24 md:mt-20");
-    			add_location(div4, file$a, 11, 2, 479);
-    			attr_dev(div5, "class", "w-full flex flex-wrap justify-center");
-    			add_location(div5, file$a, 10, 1, 426);
+    			add_location(div1, file$a, 25, 4, 937);
+    			attr_dev(div2, "class", "text-center pt-12 pb-12");
+    			add_location(div2, file$a, 29, 4, 1039);
+    			attr_dev(div3, "class", "w-full lg:w-1/2 flex flex-col justify-center md:justify-start my-auto pt-4 md:pt-0 md:px-18 lg:px-18 xl:px-24 md:mt-20");
+    			add_location(div3, file$a, 11, 2, 479);
+    			attr_dev(div4, "class", "w-full flex flex-wrap justify-center");
+    			add_location(div4, file$a, 10, 1, 426);
     		},
     		l: function claim(nodes) {
     			throw new Error("options.hydrate only works if the component was compiled with the `hydratable: true` option");
     		},
     		m: function mount(target, anchor) {
-    			insert_dev(target, div5, anchor);
-    			append_dev(div5, div4);
-    			append_dev(div4, div0);
+    			insert_dev(target, div4, anchor);
+    			append_dev(div4, div3);
+    			append_dev(div3, div0);
     			append_dev(div0, h1);
     			append_dev(div0, t1);
     			mount_component(githublink, div0, null);
-    			append_dev(div4, t2);
-    			append_dev(div4, div1);
-    			append_dev(div4, t3);
-    			append_dev(div4, div2);
-    			mount_component(markdown, div2, null);
-    			append_dev(div4, t4);
-    			append_dev(div4, div3);
-    			mount_component(madewith, div3, null);
-    			insert_dev(target, t5, anchor);
+    			append_dev(div3, t2);
+    			append_dev(div3, div1);
+    			mount_component(markdown, div1, null);
+    			append_dev(div3, t3);
+    			append_dev(div3, div2);
+    			mount_component(madewith, div2, null);
+    			insert_dev(target, t4, anchor);
     			mount_component(tailwindcss, target, anchor);
     			current = true;
     		},
@@ -4931,11 +4923,11 @@ var app = (function () {
     			current = false;
     		},
     		d: function destroy(detaching) {
-    			if (detaching) detach_dev(div5);
+    			if (detaching) detach_dev(div4);
     			destroy_component(githublink);
     			destroy_component(markdown);
     			destroy_component(madewith);
-    			if (detaching) detach_dev(t5);
+    			if (detaching) detach_dev(t4);
     			destroy_component(tailwindcss, detaching);
     		}
     	};

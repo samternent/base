@@ -19,9 +19,9 @@
       <Nav/>
     </div> -->
 
-    <div class="flex flex-col pt-4 md:pt-8 text-center">
+    <!-- <div class="flex flex-col pt-4 md:pt-8 text-center"> -->
       <!-- <ProfileCard/> -->
-    </div>
+    <!-- </div> -->
 
     <div class="flex flex-col pt-4 md:pt-8 text-center">
       <Markdown path="Welcome"/>
