@@ -1,5 +1,5 @@
 <script>
-import { AtSignIcon, InstagramIcon } from 'svelte-feather-icons';
+// import { AtSignIcon, InstagramIcon } from 'svelte-feather-icons';
 </script>
 <!-- <p class="font-thin text-center p-4">
   <InstagramIcon size="1.5x" class="inline"/>
@@ -8,7 +8,6 @@ import { AtSignIcon, InstagramIcon } from 'svelte-feather-icons';
   </a>
 </p> -->
 <p class="font-thin text-center p-4">
-  <AtSignIcon size="1.5x" class="inline"/>
   <a href="mailto:sam@ternent.dev" class="hover:text-primary">
     sam@ternent.dev
   </a>
