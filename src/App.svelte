@@ -6,6 +6,9 @@
   import MadeWith from './components/MadeWith.svelte';
   import Markdown from './components/Markdown.svelte';
   import ProfileCard from './components/ProfileCard.svelte';
+  import FactorCombinations from './components/FactorCombinations.svelte';
+  import RangeSumQuery from './components/RangeSumQuery.svelte';
+  import UnionFind from './components/UnionFind.svelte';
   import Nav from './components/Nav.svelte';
 
   let welcome;
@@ -30,9 +33,15 @@
       <Nav/>
     </div> -->
 
-    <!-- <div class="flex flex-col pt-4 md:pt-8 text-center"> -->
-      <!-- <ProfileCard/> -->
-    <!-- </div> -->
+    <div class="flex flex-col pt-4 md:pt-8 text-center">
+      <FactorCombinations/>
+    </div>
+    <div class="flex flex-col pt-4 md:pt-8 text-center">
+      <RangeSumQuery/>
+    </div>
+    <div class="flex flex-col pt-4 md:pt-8 text-center">
+      <UnionFind/>
+    </div>
 
     <div class="flex flex-col pt-4 md:pt-8 text-center">
       {#if welcome}
