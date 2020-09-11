@@ -2,7 +2,7 @@
   "data": {
     "firstName": "Sam",
     "lastName": "Ternent",
-    "avatarUrl": "image.png",
+    "avatarUrl": "https://ternent.dev/concords/avatar.jpeg",
     "organisation": "Team Concords",
     "hash": "e9753b692ddd5dba843c354680823ee1a06b62311f6c18cf21aa2d1f856e51"
   },
