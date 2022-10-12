@@ -38,7 +38,7 @@
 	<title>🛍️ Simons Sweet Shop</title>
 </svelte:head>
 
-<div class="bg-white py-6 border rounded w-100">
+<div class="bg-white py-6 border shadow-lg">
   <div class="px-6 py-4">
       <input class="appearance-none block w-full bg-gray-100 text-gray-700 border rounded py-3 px-4 mb-2 leading-tight focus:outline-none focus:bg-white" bind:value type="number" min="1" max="50000" >
       <input type="range" min="1" max="30000" bind:value class="my-4 w-full"/>
@@ -70,3 +70,12 @@
       </p>
   </div>
 </div>
+<style>
+.shadow-block-yellow {
+  box-shadow: var(--title-shadow-color) 1px 1px,
+    var(--title-shadow-color) 2px 2px,
+    var(--title-shadow-color) 3px 3px,
+    var(--title-shadow-color) 4px 4px,
+    var(--title-shadow-color) 5px 5px;
+}
+</style>

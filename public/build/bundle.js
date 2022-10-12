@@ -890,13 +890,13 @@ var app = (function () {
     			t4 = text(t4_value);
     			t5 = space();
     			attr_dev(span0, "class", "mr-4");
-    			add_location(span0, file$2, 51, 12, 1541);
+    			add_location(span0, file$2, 51, 12, 1537);
     			attr_dev(span1, "class", "text-l mr-2");
-    			add_location(span1, file$2, 52, 36, 1612);
+    			add_location(span1, file$2, 52, 36, 1608);
     			attr_dev(span2, "class", "font-thin");
-    			add_location(span2, file$2, 52, 12, 1588);
+    			add_location(span2, file$2, 52, 12, 1584);
     			attr_dev(p, "class", "bg-gray-100 font-normal flex rounded-full px-3 text-xs text-gray-700 m-1 py-1");
-    			add_location(p, file$2, 50, 10, 1439);
+    			add_location(p, file$2, 50, 10, 1435);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, p, anchor);
@@ -956,9 +956,9 @@ var app = (function () {
     			create_component(deleteicon.$$.fragment);
     			t2 = space();
     			attr_dev(span, "class", "mr-4");
-    			add_location(span, file$2, 61, 10, 1994);
+    			add_location(span, file$2, 61, 10, 1990);
     			attr_dev(p, "class", "bg-purple-100 text-gray-800 font-normal cursor-pointer flex rounded-full px-3 text-xs m-1 py-1");
-    			add_location(p, file$2, 60, 8, 1848);
+    			add_location(p, file$2, 60, 8, 1844);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, p, anchor);
@@ -1094,31 +1094,31 @@ var app = (function () {
     			attr_dev(input0, "type", "number");
     			attr_dev(input0, "min", "1");
     			attr_dev(input0, "max", "50000");
-    			add_location(input0, file$2, 42, 6, 921);
+    			add_location(input0, file$2, 42, 6, 917);
     			attr_dev(input1, "type", "range");
     			attr_dev(input1, "min", "1");
     			attr_dev(input1, "max", "30000");
     			attr_dev(input1, "class", "my-4 w-full");
-    			add_location(input1, file$2, 43, 6, 1122);
-    			add_location(strong, file$2, 45, 8, 1261);
+    			add_location(input1, file$2, 43, 6, 1118);
+    			add_location(strong, file$2, 45, 8, 1257);
     			attr_dev(p0, "class", "text-gray-700 text-base pt-2 text-right");
-    			add_location(p0, file$2, 44, 6, 1201);
+    			add_location(p0, file$2, 44, 6, 1197);
     			attr_dev(section0, "class", "flex flex-wrap justify-start pt-6");
-    			add_location(section0, file$2, 48, 6, 1325);
+    			add_location(section0, file$2, 48, 6, 1321);
     			attr_dev(div0, "class", "px-6 py-4");
-    			add_location(div0, file$2, 41, 2, 891);
+    			add_location(div0, file$2, 41, 2, 887);
     			attr_dev(section1, "class", "flex flex-wrap");
-    			add_location(section1, file$2, 58, 6, 1781);
+    			add_location(section1, file$2, 58, 6, 1777);
     			attr_dev(input2, "class", "bg-gray-100 p-2 border-solid rounded border border-gray-400");
-    			add_location(input2, file$2, 65, 8, 2151);
-    			add_location(span, file$2, 67, 10, 2399);
+    			add_location(input2, file$2, 65, 8, 2147);
+    			add_location(span, file$2, 67, 10, 2395);
     			attr_dev(button, "class", "bg-purple-600 hover:bg-purple-700 text-gray-200 font-bold py-2 px-4 rounded inline-flex items-center");
-    			add_location(button, file$2, 66, 8, 2256);
+    			add_location(button, file$2, 66, 8, 2252);
     			attr_dev(p1, "class", "font-normal flex justify-between m-2 py-4");
-    			add_location(p1, file$2, 64, 6, 2089);
+    			add_location(p1, file$2, 64, 6, 2085);
     			attr_dev(div1, "class", "px-6 py-4 w-100");
-    			add_location(div1, file$2, 57, 2, 1745);
-    			attr_dev(div2, "class", "bg-white py-6 border rounded w-100");
+    			add_location(div1, file$2, 57, 2, 1741);
+    			attr_dev(div2, "class", "bg-white py-6 border shadow-lg");
     			add_location(div2, file$2, 40, 0, 840);
     		},
     		l: function claim(nodes) {
@@ -4044,7 +4044,7 @@ var app = (function () {
     		c: function create() {
     			section = element("section");
     			if (if_block) if_block.c();
-    			attr_dev(section, "class", "shadow-inner bg-white markdown-body w-full h-full text-lg py-6 p-4 overflow-y-auto");
+    			attr_dev(section, "class", "markdown-body w-full h-full text-lg py-6 p-4 overflow-y-auto");
     			add_location(section, file$4, 13, 0, 240);
     		},
     		l: function claim(nodes) {
@@ -4156,57 +4156,83 @@ var app = (function () {
     const file$5 = "src/App.svelte";
 
     function create_fragment$6(ctx) {
+    	let div5;
     	let div4;
     	let div3;
-    	let div2;
+    	let h1;
+    	let t1;
     	let div0;
     	let simonssweetshop;
-    	let t0;
+    	let t2;
     	let div1;
+    	let markdown;
+    	let t3;
+    	let div2;
     	let madewith;
-    	let t1;
+    	let t4;
     	let tailwindcss;
     	let current;
     	simonssweetshop = new SimonsSweetShop({ $$inline: true });
+
+    	markdown = new Markdown({
+    			props: { path: "Welcome" },
+    			$$inline: true
+    		});
+
     	madewith = new MadeWith({ $$inline: true });
     	tailwindcss = new Tailwindcss({ $$inline: true });
 
     	const block = {
     		c: function create() {
+    			div5 = element("div");
     			div4 = element("div");
     			div3 = element("div");
-    			div2 = element("div");
+    			h1 = element("h1");
+    			h1.textContent = "Sweets Shop Challenge.";
+    			t1 = space();
     			div0 = element("div");
     			create_component(simonssweetshop.$$.fragment);
-    			t0 = space();
+    			t2 = space();
     			div1 = element("div");
+    			create_component(markdown.$$.fragment);
+    			t3 = space();
+    			div2 = element("div");
     			create_component(madewith.$$.fragment);
-    			t1 = space();
+    			t4 = space();
     			create_component(tailwindcss.$$.fragment);
-    			attr_dev(div0, "class", "flex flex-col pt-4 md:pt-8");
-    			add_location(div0, file$5, 10, 8, 489);
-    			attr_dev(div1, "class", "text-center pt-12 pb-12");
-    			add_location(div1, file$5, 16, 8, 681);
-    			attr_dev(div2, "class", "flex flex-col justify-center md:justify-start my-auto pt-4 md:pt-0 md:px-18 lg:px-18 xl:px-24 md:mt-20");
-    			add_location(div2, file$5, 9, 6, 364);
-    			attr_dev(div3, "class", "w-full lg:w-1/2 flex flex-col");
-    			add_location(div3, file$5, 8, 2, 314);
-    			attr_dev(div4, "class", "w-full flex flex-wrap justify-center");
-    			add_location(div4, file$5, 7, 1, 261);
+    			attr_dev(h1, "class", "mx-auto max-w-2xl text-4xl md:text-5xl font-bold shadow-text text-indigo-700 tracking-tighter");
+    			add_location(h1, file$5, 10, 8, 453);
+    			attr_dev(div0, "class", "flex flex-col pt-4 md:pt-8 w-full max-w-2xl mx-auto");
+    			add_location(div0, file$5, 11, 8, 595);
+    			attr_dev(div1, "class", "pt-12 pb-12 w-full max-w-6xl mx-auto");
+    			add_location(div1, file$5, 14, 8, 715);
+    			attr_dev(div2, "class", "text-center pt-12 pb-12");
+    			add_location(div2, file$5, 17, 8, 828);
+    			attr_dev(div3, "class", "flex flex-col justify-center md:justify-start my-auto pt-4 md:pt-0 md:mt-20");
+    			add_location(div3, file$5, 9, 6, 355);
+    			attr_dev(div4, "class", "w-full flex flex-col");
+    			add_location(div4, file$5, 8, 2, 314);
+    			attr_dev(div5, "class", "w-full flex flex-wrap justify-center");
+    			add_location(div5, file$5, 7, 1, 261);
     		},
     		l: function claim(nodes) {
     			throw new Error("options.hydrate only works if the component was compiled with the `hydratable: true` option");
     		},
     		m: function mount(target, anchor) {
-    			insert_dev(target, div4, anchor);
+    			insert_dev(target, div5, anchor);
+    			append_dev(div5, div4);
     			append_dev(div4, div3);
-    			append_dev(div3, div2);
-    			append_dev(div2, div0);
+    			append_dev(div3, h1);
+    			append_dev(div3, t1);
+    			append_dev(div3, div0);
     			mount_component(simonssweetshop, div0, null);
-    			append_dev(div2, t0);
-    			append_dev(div2, div1);
-    			mount_component(madewith, div1, null);
-    			insert_dev(target, t1, anchor);
+    			append_dev(div3, t2);
+    			append_dev(div3, div1);
+    			mount_component(markdown, div1, null);
+    			append_dev(div3, t3);
+    			append_dev(div3, div2);
+    			mount_component(madewith, div2, null);
+    			insert_dev(target, t4, anchor);
     			mount_component(tailwindcss, target, anchor);
     			current = true;
     		},
@@ -4214,21 +4240,24 @@ var app = (function () {
     		i: function intro(local) {
     			if (current) return;
     			transition_in(simonssweetshop.$$.fragment, local);
+    			transition_in(markdown.$$.fragment, local);
     			transition_in(madewith.$$.fragment, local);
     			transition_in(tailwindcss.$$.fragment, local);
     			current = true;
     		},
     		o: function outro(local) {
     			transition_out(simonssweetshop.$$.fragment, local);
+    			transition_out(markdown.$$.fragment, local);
     			transition_out(madewith.$$.fragment, local);
     			transition_out(tailwindcss.$$.fragment, local);
     			current = false;
     		},
     		d: function destroy(detaching) {
-    			if (detaching) detach_dev(div4);
+    			if (detaching) detach_dev(div5);
     			destroy_component(simonssweetshop);
+    			destroy_component(markdown);
     			destroy_component(madewith);
-    			if (detaching) detach_dev(t1);
+    			if (detaching) detach_dev(t4);
     			destroy_component(tailwindcss, detaching);
     		}
     	};
